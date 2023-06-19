@@ -7,8 +7,21 @@
   - `npm run test-anagram`
 */
 
-function isAnagram(str1, str2) {
+// function createMap(array){
+//   const charObj = {}
+//   array.forEach(element => {
+//     if(!charObj.hasOwnProperty(element)){
+//       charObj[element] = 1
+//     }
+//     charObj[element] = charObj[element]  + 1;
+//   });
+//   return charObj
+// }
 
+function isAnagram(str1, str2) {
+  str1 = str1.toLowerCase();
+  str2 = str2.toLowerCase();
+  return str1.split("").sort().join("") === str2.split("").sort().join("")
 }
 
 module.exports = isAnagram;
